@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EXOHABIT | Exoplanet Habitability Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            EXO<span>HABIT</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#home">HOME</a>
+
+            <a href="#explore">EXPLORE</a>
+
+            <a href="#predict">PREDICT</a>
+
+            <a href="#model">MODEL</a>
+
+            <a href="#about">ABOUT</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="mission-tag">
+                    ● EXOPLANET ANALYSIS SYSTEM
+                </div>
+
+                <h1>
+                    EXOPLANET
+                    <span>HABITABILITY</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore distant worlds and estimate their
+                    potential habitability using machine learning
+                    and astronomical parameters.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#predict" class="primary-btn">
+                        START ANALYSIS
+                        <span>→</span>
+                    </a>
+
+                    <a href="#explore" class="secondary-btn">
+                        EXPLORE DATA
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>40K+</strong>
+                        <span>DATA RECORDS</span>
+                    </div>
+
+                    <div>
+                        <strong>08</strong>
+                        <span>INPUT FEATURES</span>
+                    </div>
+
+                    <div>
+                        <strong>ML</strong>
+                        <span>CLASSIFIER</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLANET VISUAL -->
+
+            <div class="planet-area">
+
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+
+                <div class="planet-glow"></div>
+
+                <div class="planet">
+
+                    <div class="planet-surface"></div>
+
+                    <div class="planet-cloud cloud-1"></div>
+                    <div class="planet-cloud cloud-2"></div>
+                    <div class="planet-cloud cloud-3"></div>
+
+                </div>
+
+                <div class="planet-label">
+                    <span>TARGET</span>
+                    <strong>EXO-01</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EXPLORE
+             ================================================= -->
+
+        <section id="explore" class="section">
+
+            <div class="section-heading">
+
+                <span>01 / EXPLORE PARAMETERS</span>
+
+                <h2>
+                    WHAT MAKES A
+                    <em>WORLD?</em>
+                </h2>
+
+                <p>
+                    The prediction system analyzes important
+                    planetary and stellar parameters.
+                </p>
+
+            </div>
+
+
+            <div class="parameter-grid">
+
+                <article class="parameter-card cyan">
+
+                    <div class="card-number">01</div>
+
+                    <div class="parameter-icon">◉</div>
+
+                    <h3>PLANET RADIUS</h3>
+
+                    <div class="value">
+                        Earth Radii
+                    </div>
+
+                    <p>
+                        Relative size of the exoplanet
+                        compared with Earth.
+                    </p>
+
+                </article>
+
+
+                <article class="parameter-card purple">
+
+                    <div class="card-number">02</div>
+
+                    <div class="parameter-icon">◌</div>
+
+                    <h3>ORBITAL PERIOD</h3>
+
+                    <div class="value">
+                        Days
+                    </div>
+
+                    <p>
+                        Time required for the planet
+                        to complete one orbit.
+                    </p>
+
+                </article>
+
+
+                <article class="parameter-card pink">
+
+                    <div class="card-number">03</div>
+
+                    <div class="parameter-icon">☼</div>
+
+                    <h3>EQUILIBRIUM TEMP.</h3>
+
+                    <div class="value">
+                        Kelvin
+                    </div>
+
+                    <p>
+                        Estimated planetary equilibrium
+                        temperature.
+                    </p>
+
+                </article>
+
+
+                <article class="parameter-card orange">
+
+                    <div class="card-number">04</div>
+
+                    <div class="parameter-icon">✦</div>
+
+                    <h3>STELLAR INSOLATION</h3>
+
+                    <div class="value">
+                        Earth Units
+                    </div>
+
+                    <p>
+                        Amount of stellar radiation
+                        received by the planet.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PREDICTION
+             ================================================= -->
+
+        <section id="predict" class="section prediction-section">
+
+            <div class="section-heading">
+
+                <span>02 / MISSION CONTROL</span>
+
+                <h2>
+                    HABITABILITY
+                    <em>ANALYSIS</em>
+                </h2>
+
+                <p>
+                    Enter the planetary and stellar parameters
+                    to generate an ML-based prediction.
+                </p>
+
+            </div>
+
+
+            <div class="prediction-layout">
+
+
+                <!-- INPUT PANEL -->
+
+                <div class="input-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span>INPUT PARAMETERS</span>
+                            <h3>PLANET PROFILE</h3>
+                        </div>
+
+                        <div class="status-dot">
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <form id="predictionForm">
+
+
+                        <!-- Planet Radius -->
+
+                        <div class="input-group">
+
+                            <label for="pl_rade">
+                                PLANET RADIUS
+                                <small>Earth radii</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pl_rade"
+                                step="any"
+                                placeholder="Example: 1.0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Orbital Period -->
+
+                        <div class="input-group">
+
+                            <label for="pl_orbper">
+                                ORBITAL PERIOD
+                                <small>Days</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pl_orbper"
+                                step="any"
+                                placeholder="Example: 365"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Equilibrium Temperature -->
+
+                        <div class="input-group">
+
+                            <label for="pl_eqt">
+                                EQUILIBRIUM TEMPERATURE
+                                <small>Kelvin</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pl_eqt"
+                                step="any"
+                                placeholder="Example: 288"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Insolation -->
+
+                        <div class="input-group">
+
+                            <label for="pl_insol">
+                                STELLAR INSOLATION
+                                <small>Earth units</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pl_insol"
+                                step="any"
+                                placeholder="Example: 1.0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Star Temperature -->
+
+                        <div class="input-group">
+
+                            <label for="st_teff">
+                                STAR TEMPERATURE
+                                <small>Kelvin</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="st_teff"
+                                step="any"
+                                placeholder="Example: 5778"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Star Radius -->
+
+                        <div class="input-group">
+
+                            <label for="st_rad">
+                                STAR RADIUS
+                                <small>Solar radii</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="st_rad"
+                                step="any"
+                                placeholder="Example: 1.0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Star Mass -->
+
+                        <div class="input-group">
+
+                            <label for="st_mass">
+                                STAR MASS
+                                <small>Solar masses</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="st_mass"
+                                step="any"
+                                placeholder="Example: 1.0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Surface Gravity -->
+
+                        <div class="input-group">
+
+                            <label for="st_logg">
+                                STAR SURFACE GRAVITY
+                                <small>log(g)</small>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="st_logg"
+                                step="any"
+                                placeholder="Example: 4.44"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="analyze-btn">
+
+                            <span>RUN HABITABILITY ANALYSIS</span>
+
+                            <b>→</b>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- RESULT PANEL -->
+
+                <div class="result-panel">
+
+                    <div class="result-top">
+
+                        <span>03 / ANALYSIS OUTPUT</span>
+
+                        <div class="scanner"></div>
+
+                    </div>
+
+
+                    <div class="result-icon">
+                        ◉
+                    </div>
+
+
+                    <p class="result-label">
+                        PREDICTION STATUS
+                    </p>
+
+
+                    <h3 id="predictionText">
+                        Awaiting Input
+                    </h3>
+
+
+                    <p class="result-description">
+                        Submit the planetary parameters
+                        to begin the machine-learning analysis.
+                    </p>
+
+
+                    <!-- HABITABLE -->
+
+                    <div class="probability-item">
+
+                        <div class="probability-label">
+
+                            <span>
+                                Potentially Habitable
+                            </span>
+
+                            <strong id="habitableProbability">
+                                --%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill habitable-fill"
+                                id="habitableBar">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOT HABITABLE -->
+
+                    <div class="probability-item">
+
+                        <div class="probability-label">
+
+                            <span>
+                                Not Potentially Habitable
+                            </span>
+
+                            <strong id="notHabitableProbability">
+                                --%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill not-habitable-fill"
+                                id="notHabitableBar">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-note">
+
+                        <span>ⓘ</span>
+
+                        <p>
+                            This is a project-defined
+                            potential-habitability classification
+                            based on selected astronomical
+                            parameters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MODEL
+             ================================================= -->
+
+        <section id="model" class="section model-section">
+
+            <div class="section-heading">
+
+                <span>04 / MACHINE LEARNING</span>
+
+                <h2>
+                    MODEL
+                    <em>INTELLIGENCE</em>
+                </h2>
+
+                <p>
+                    The prediction engine uses a trained
+                    Random Forest classification model.
+                </p>
+
+            </div>
+
+
+            <div class="model-grid">
+
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        ML
+                    </div>
+
+                    <span>ALGORITHM</span>
+
+                    <h3>
+                        RANDOM FOREST
+                    </h3>
+
+                    <p>
+                        An ensemble learning method that
+                        combines multiple decision trees
+                        for classification.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        08
+                    </div>
+
+                    <span>FEATURES</span>
+
+                    <h3>
+                        ASTRONOMICAL INPUTS
+                    </h3>
+
+                    <p>
+                        Planetary and stellar properties
+                        are used as model inputs.
+                    </p>
+
+                </div>
+
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        AI
+                    </div>
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        CLASSIFICATION
+                    </h3>
+
+                    <p>
+                        The system returns a predicted
+                        class and probability estimates.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+             ================================================= -->
+
+        <section id="about" class="section about-section">
+
+            <div class="about-box">
+
+                <div class="about-content">
+
+                    <span class="about-tag">
+                        05 / PROJECT INFORMATION
+                    </span>
+
+                    <h2>
+                        SEARCHING FOR
+                        <span>WORLDS</span>
+                    </h2>
+
+                    <p>
+                        Exoplanet Habitability Prediction is
+                        a machine-learning based academic project
+                        designed to analyze astronomical parameters
+                        and classify whether an exoplanet falls
+                        within project-defined potential-habitability
+                        criteria.
+                    </p>
+
+                    <p>
+                        The system combines Python, Flask,
+                        Pandas and Scikit-learn with a modern
+                        web interface to create an interactive
+                        prediction platform.
+                    </p>
+
+
+                    <div class="technology-list">
+
+                        <span>PYTHON</span>
+                        <span>PANDAS</span>
+                        <span>SCIKIT-LEARN</span>
+                        <span>FLASK</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-orbit">
+
+                    <div class="mini-planet"></div>
+
+                    <div class="mini-orbit"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            EXO<span>HABIT</span>
+        </div>
+
+        <p>
+            Exoplanet Habitability Prediction
+        </p>
+
+        <small>
+            Academic Machine Learning Project
+        </small>
+
+        <div class="footer-line"></div>
+
+        <small>
+            NASA-inspired interface • Not affiliated with NASA
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
